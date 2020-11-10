@@ -1,0 +1,454 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+a,
+li,
+button {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 52px;
+	background-color: #9d4edd;
+	padding: 10px 30px;
+}
+
+header img {
+	width: 159px;
+	height: 35px;
+	cursor: pointer;
+}
+
+header ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+header ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+main {
+	display: grid;
+	place-items: center;
+	padding: 20px;
+}
+
+main #home-logo {
+	margin: 0 0 20px 0;
+}
+
+main form label,
+input {
+	display: block;
+}
+
+main form label {
+	margin: 5px 0;
+}
+
+main form input {
+	width: 192px;
+	height: 40px;
+	border: none;
+	border-bottom: 1px solid #c9c9c9;
+	padding: 0px 5px;
+	color: #464646;
+	display: inline-block;
+	font-size: 16px;
+}
+
+main form input:focus {
+	outline: none;
+	border-bottom: 2px solid #9e4edd;
+}
+
+button {
+	width: 192px;
+	height: 40px;
+	background-color: #9d4edd;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	margin: 0 0 20px 0;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: #7b2cbf;
+}
+
+main form .input-wrapper {
+	margin: 0 0 20px 0;
+}
+
+.lost-password a {
+	text-decoration: none;
+	color: #464646;
+	transition: all 0.3s ease 0s;
+}
+
+.lost-password a:hover {
+	color: #9d4edd;
+}
+
+.create-account {
+	margin-top: 20px;
+}
+
+.create-account a {
+	text-decoration: none;
+	color: #9d4edd;
+	margin-top: 20px;
+}
+
+.create-account a:hover {
+	border-bottom: 1px solid #9d4edd;
+}
+
+#list {
+	width: 1200px;
+	display: grid;
+	grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+#list #user-bio {
+	text-align: center;
+	width: 230px;
+}
+
+#list #user-bio img {
+	width: 180px;
+	height: auto;
+	clip-path: circle(43% at center);
+}
+
+#list #user-lists {
+	padding: 20px;
+}
+
+#list #user-lists h2 {
+	margin: 0 0 18px 0;
+	position: relative;
+}
+
+#list #user-lists h2:after {
+	content: "";
+	background: #c1c1c1;
+	position: absolute;
+	top: 28px;
+	left: 0;
+	height: 2px;
+	width: 180px;
+}
+
+#list #user-lists ul li {
+	list-style: none;
+	margin: 0 0 10px 0;
+}
+
+#list #list-display h1 {
+	font-size: 28px;
+	margin: 0 0 15px 0;
+	display: inline-block;
+}
+
+#list #list-display {
+	margin: 0 0 0 80px;
+}
+
+#list #list-cards span {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+}
+
+#list #list-cards .card-item {
+	display: inline-block;
+	margin: 0 20px 20px 0;
+}
+
+.card-image {
+	width: 228px;
+	height: auto;
+}
+
+#create-user h2 {
+	margin: 0 0 20px 0;
+	font-size: 26px;
+}
+
+.card-inputwrapper input {
+	display: inline;
+	margin: 5px 10px 15px 0;
+}
+
+.card-quantity-input {
+	width: 35px;
+}
+
+.card-add-more {
+	width: 34px;
+	height: 27px;
+	background-color: #7b2cbf;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	border-radius: 2px;
+	font-size: 23px;
+}
+
+#card-list-textarea {
+	border-radius: 5px;
+	margin: 10px 0;
+	padding: 5px;
+	border: 1px solid #c9c9c9;
+	resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.login-error-msg {
+	width: 250px;
+	height: auto;
+	display: block;
+	color: #c40a0a;
+	text-align: center;
+	box-sizing: border-box;
+	margin: 10px 0 28px 0;
+	font-size: 16px;
+	border-bottom: 2px solid #ca2a2a;
+	padding: 10px 0;
+}
+
+.remove {
+	display: inline-block;
+	color: #7b2cbf;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#user-lists ul li a {
+	text-decoration: none;
+	color: #7b2cbf;
+	font-size: 14px;
+}
+
+#user-lists ul li a:hover {
+	color: #3c096b;
+}
+
+#user-lists ul {
+	margin: 0 0 20px 0;
+}
+
+.list-tip {
+	color: #7a7a7a;
+	font-size: 12px;
+	display: block;
+}
+
+#missing-cards {
+	background-color: #bd1e1e;
+	width: 200px;
+	font-size: 14px;
+	color: #ffffff;
+	border-radius: 5px;
+	height: auto;
+	padding: 16px;
+	margin: 0 0 35px 0;
+}
+
+#missing-cards ul li {
+	list-style: none;
+}
+
+#dashboard-title {
+	width: 350px;
+	color: #050202;
+	font-size: 16px;
+}
+
+#dashboard-list {
+	margin: 15px 0;
+}
+
+#dashboard-list li:hover {
+	background-color: #dedede;
+}
+
+#dashboard-list li {
+	list-style: none;
+	background-color: #f3f3f3;
+	border-radius: 5px;
+	width: 350px;
+	margin: 10px 0;
+	position: relative;
+}
+
+#dashboard-list li a:hover {
+	color: #3c096b;
+}
+
+#dashboard-list li a {
+	text-decoration: none;
+	color: #050202;
+	display: block;
+	padding: 12px;
+}
+
+#dashboard-list li a img {
+	height: auto;
+	width: 15px;
+}
+
+#edit-list-dashboard {
+	position: absolute;
+	top: 2px;
+	right: 25px;
+}
+
+#delete-list-dashboard {
+	position: absolute;
+	top: 2px;
+	right: 0px;
+}
+
+::placeholder {
+	color: #ababab;
+}
+
+#editable {
+	display: inline-block;
+	margin: 0 0 0 10px;
+}
+
+#editable a img {
+	width: 15px;
+	height: auto;
+	margin: 0 5px 0 0;
+}
+
+input[type='file'] {
+	display: none;
+}
+
+.label-file {
+	width: 192px;
+	height: 25px;
+	background-color: #9d4edd;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	margin: 0 0 10px 0;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	font-size: 12px;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.button {
+	width: 36px;
+	background-color: #9d4edd;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	margin: 0 0 10px 0;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	font-size: 22px;
+	text-align: center;
+	padding: 2px 0;
+	display: inline-block;
+}
+
+.button:hover {
+	background-color: #3c096b;
+}
+
+.label-file:hover {
+	background-color: #7b2cbf;
+}
+
+#file-name {
+	font-size: 12px;
+	width: 192px;
+	color: #7a7a7a;
+	display: block;
+}
+
+@media all and (max-width: 700px) {
+	header {
+		padding: 0;
+	}
+
+	header img {
+		max-width: 110px;
+		max-width: 7rem;
+		height: auto;
+		margin: 13px 10px;
+		margin: 0.9rem 0.5rem;
+	}
+
+	header ul li {
+		padding: 18px 10px;
+		font-size: 14px;
+		font-size: 0.9rem;
+	}
+
+	main #home-logo {
+		max-width: 250px;
+		max-width: 16rem;
+		height: auto;
+	}
+
+	#dashboard-list li {
+		width: 270px;
+		width: 17rem;
+	}
+
+	#dashboard-title {
+		width: 100%;
+		font-size: 13px;
+		font-size: 0.7rem;
+		text-align: center;
+	}
+
+	main {
+		padding: 10px 0;
+	}
+
+	#list {
+		width: 100%;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+	}
+
+	#list aside {
+		display: none;
+	}
+
+	#list #list-display h1 {
+		font-size: 18px;
+		font-size: 1.1rem;
+	}
+}

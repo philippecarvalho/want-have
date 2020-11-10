@@ -1,0 +1,19 @@
+<main>
+
+    <% if(message != ''){ %>
+        <span class="login-error-msg">
+            <%= message %>
+        </span>
+        <% }%>
+
+    <div>
+        <div>Não consegue acessar?</div><br>
+        <form action="/forgot" method="post">
+            <div class="input-wrapper">
+                <label for="login">Email</label>
+                <input type="text" name="email" type="text" required>
+            </div>
+            <button>Resetar senha</button>
+        </form>
+    </div>
+</main>

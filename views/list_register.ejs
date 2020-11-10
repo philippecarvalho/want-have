@@ -1,0 +1,97 @@
+<main>    
+    <section id="list">
+        <%- include('sidebar.ejs') %>
+        <section id="list-register">
+            <% if(cardFail){ %>
+                <div id="missing-cards">
+                    Cards não encontrados: 
+                    <ul>
+                    <% cardFail.forEach(item => {%>
+                        <li> <%= item %> </li>
+                    <% }) %>                  
+                    </ul>                    
+                </div>
+            <% }%>
+
+            <form action="/list_register" method="POST" id="list-add-form">
+                <% if(!errorList){ %>
+                <div>
+                    <input type="text" name="title" placeholder="Nome da lista" required>
+                    <div class="button" onclick="addItem()">+</div>
+                </div>
+                
+                <div id="card-inputs">
+                    <div class="card-inputwrapper">
+                        <input class="card-quantity-input" placeholder="1x" type="number" name="quantity" required><input class="card-name-input" placeholder="carta" type="text" name="card" onkeypress="handle(event)" required>
+                    </div>
+                <% }%>                    
+                    
+                <% if(errorList){ %>
+                    <div>
+                        <input type="text" name="title" value="<%= errorList.title %>" required>
+                        <div class="button" onclick="addItem()">+</div>
+                    </div>
+
+                    <div id="card-inputs">                        
+                    <% errorList.card.forEach(function(el, i) {%>
+                        <div class="card-inputwrapper">
+                            <input class="card-quantity-input" type="number" name="quantity" value="<%= errorList.quantity[i] %>"  required>
+                            <input class="card-name-input"  type="text" name="card" onkeypress="handle(event)" value="<%= el %>"  required>
+                            <div class="remove" onclick="return this.parentNode.remove()">X</div>
+                        </div>
+                    <% }) %>
+                <% }%>
+
+                </div>
+                <button type="submit" id="list-register-submit">Salvar lista</button>
+                <span class="list-tip">Aperte enter para inserir mais cartas</span>
+            </form>
+        </section>
+    </section>
+</main>
+
+<script>
+
+    function handle(e){
+        if(e.keyCode === 13){
+            e.preventDefault();
+            addItem()
+        }
+    } 
+
+    function addItem() {
+        
+        let div = document.createElement("div");
+        div.setAttribute("class", "card-inputwrapper");
+
+        // Create a text input
+        let numInput = document.createElement("input");
+        numInput.setAttribute("class", "card-quantity-input");
+        numInput.setAttribute("placeholder", "1x");
+        numInput.setAttribute("type", "number");
+        numInput.setAttribute("name", "quantity");
+
+        let nameInput = document.createElement("input");
+        nameInput.setAttribute("class", "card-name-input");
+        nameInput.setAttribute("placeholder", "carta");
+        nameInput.setAttribute("type", "text");
+        nameInput.setAttribute("name", "card");
+        nameInput.setAttribute("onkeypress", "handle(event)");
+        nameInput.setAttribute("required", "");
+
+        let removeInput = document.createElement("div")
+        removeInput.setAttribute("class", "remove")
+        removeInput.setAttribute("onclick", "return this.parentNode.remove();")
+        removeInput.innerHTML = "X"
+
+        // add the file and text to the div
+        div.appendChild(numInput);
+        div.appendChild(nameInput);
+        div.appendChild(removeInput);
+
+        //Append the div to the container div
+        document.querySelector("#card-inputs").appendChild(div)
+        totalInputs = document.querySelectorAll('.card-name-input')
+        totalInputs[totalInputs.length -1].focus()
+    }
+</script>

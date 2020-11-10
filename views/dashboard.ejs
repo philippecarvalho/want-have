@@ -1,0 +1,22 @@
+<main>
+    <div id="dashboard-title">
+        <h1> Olá,
+            <%= user.name %>!</h2>
+    </div>
+
+    <ul id="dashboard-list">
+        <h3>Suas listas</h3>
+        <% lists.forEach(list=> {%>
+            <li>
+                <a href="/list_show/<%= list.id %>">
+                    <%= list.title %>
+                </a>
+                <a id="edit-list-dashboard" href="/edit/<%= list.id %>"><img src="imgs/editar.svg" alt=""></a>
+                <a id="delete-list-dashboard" href="/delete/<%= list.id %>"><img src="imgs/deletar.svg" alt=""></a>
+            </li>
+            <% }) %>
+    </ul>
+
+
+    <a href="/list_register"><button>Adicionar nova lista</button></a>
+</main>

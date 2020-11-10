@@ -1,0 +1,24 @@
+<main>
+
+    <% if(message != ''){ %>
+        <span class="login-error-msg">
+            <%= message %>
+        </span>
+        <% }%>
+
+    <div>
+        <div>Escolha uma nova senha</div><br>
+        <form  method="post">
+            <div class="input-wrapper">
+                <label for="password">Senha</label>
+                <input type="password" name="password" type="password">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password">Confirme a senha</label>
+                <input type="password" name="password2" type="password">
+            </div>
+            <button>Definir nova senha</button>
+        </form>
+    </div>
+</main>

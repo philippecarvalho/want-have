@@ -1,0 +1,28 @@
+<main>
+    <section id="list">
+
+        <%- include('sidebar.ejs') %>
+
+        <section id="list-display">
+            <h1><%= list.title %></h1>
+            <% if(editable){ %>
+                <div id="editable">
+                    <a id="edit-list" href="/edit/<%= list.id %>"><img src="/imgs/editar.svg" alt=""></a>
+                    <a id="delete-list" href="/delete/<%= list.id %>"><img src="/imgs/deletar.svg" alt=""></a>
+                </div>
+            <% }%>
+
+            <div id="list-cards">
+
+                <% list.card.forEach(function(el, i) { %>
+                <div class="card-item">
+                    <img src="<%= list.image[i] %>" alt="" class="card-image">
+                    <span class="card-title"><%= list.quantity[i] %>x <%= list.card[i] %></span>
+                </div>
+                <% }) %>
+
+            </div>
+
+        </section>
+    </section>
+</main>    

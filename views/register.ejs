@@ -1,0 +1,57 @@
+
+<main id="create-user">
+
+    <% if(errors != ''){ %>
+        <div class="login-error-msg">
+            <% errors.forEach(element => {%>
+                <div><%= element.msg%></div>
+            <% });%>
+        </div>
+        <% }%>
+
+    <h2>Cadastre-se</h2>
+    <div>
+        <form action="/register" method="post" enctype="multipart/form-data">
+            <div class="input-wrapper">
+                <label for="login">Nome</label>
+                <input type="text" name="name" type="text">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="login">Email</label>
+                <input type="text" name="email" type="text">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password">Senha</label>
+                <input type="password" name="password" type="password">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password">Confirme a senha</label>
+                <input type="password" name="password2" type="password">
+            </div>
+            
+            <div class="input-wrapper">
+                <label>Sua foto</label>
+                <label for="input-file"  class="label-file">Escolha o arquivo</label>
+                <input type="file" id="input-file" name="userImg">
+                <span id='file-name'></span>
+            </div>
+            
+            <button>Registrar</button>
+        </form>
+    </div>
+    <span class="lost-password"><a href="">Esqueci minha senha</a></span>
+</main>
+
+
+<script>
+    let input = document.getElementById('input-file')
+    let fileName = document.getElementById('file-name')
+    
+    input.addEventListener('change', function(){
+      fileName.textContent = this.value;
+    });
+    
+</script>

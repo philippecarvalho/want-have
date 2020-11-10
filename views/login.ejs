@@ -1,0 +1,29 @@
+<main>
+
+    <img id="home-logo" src="imgs/logo-body.png" alt="">
+
+    <% if(message != ''){ %>
+        <span class="login-error-msg">
+            <%= message %>
+        </span>
+        <% }%>
+
+    <div>
+        <form action="/login" method="post">
+            <div class="input-wrapper">
+                <label for="login">Email</label>
+                <input type="text" name="email" type="text">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password">Senha</label>
+                <input name="password" type="password">
+            </div>
+
+            <button>LOGIN</button>
+        </form>
+    </div>
+    
+    <span class="lost-password"><a href="/forgot">Esqueci minha senha</a></span>
+    <span class="create-account"><a href="/register">Criar conta</a></span>
+</main>

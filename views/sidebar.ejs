@@ -1,0 +1,20 @@
+<aside>
+    <div id="user-bio">
+        <img src="/uploads/<%= user.filename %>" alt="" id="user-picture">
+        <h3 id="user-name"><%= user.name %></h3>
+    </div>
+
+    <div id="user-lists">
+        <h2>Listas</h2>
+        <ul>
+            <% userLists.forEach(function(el, i) { %>
+            <li>
+                <a href="/list_show/<%= userLists[i]._id %>">
+                    <%= userLists[i].title %>
+                </a>
+            </li>
+            <% }) %>
+        </ul>
+        <a href="/list_register"><button>Adicionar nova lista</button></a>
+    </div>
+</aside>
