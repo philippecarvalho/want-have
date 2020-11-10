@@ -2,7 +2,7 @@
 
 ## Um editor de listas de Magic: The Gathering
 
-O [Want/Have](https://want-have.herokuapp.com/) é um site simples para você criar e editar suas listas de cartas de Magic  
+O [Want/Have](https://want-have.herokuapp.com/) é um site para você criar e editar suas listas de cartas de Magic: The Gathering
 
 ## Tecnologias utilizadas:
 - Node.js
@@ -24,6 +24,9 @@ O [Want/Have](https://want-have.herokuapp.com/) é um site simples para você cr
 ```
 npm install
 ```
-
-Insira seu login e usuário do MongoDB em /config/keys.js  
-Configure o email em /mail/mailer.js
+Também é preciso configurar as variáveis de ambiente que são usadas para o mailer e acesso do MongoDB.  
+Crie um arquivo chamado .env e definas as variáveis:
+- MONGOURI (sua url de acesso do mongodb)
+- MAIL_USER (usuário de email para o mailer)
+- MAIL_PASS (senha do email)
+- SITE_URL (url do site a ser passada nos emails)
