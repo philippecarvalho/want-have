@@ -56,10 +56,10 @@ main form label {
 }
 
 main form input {
-	width: 192px;
+	width: 300px;
 	height: 40px;
-	border: none;
-	border-bottom: 1px solid #c9c9c9;
+	border: 1px solid #c9c9c9;
+	border-radius: 5px;
 	padding: 0px 5px;
 	color: #464646;
 	display: inline-block;
@@ -85,6 +85,11 @@ button {
 
 button:hover {
 	background-color: #7b2cbf;
+}
+
+#login-form button {
+	margin: 30px auto 20px auto;
+	display: block;
 }
 
 main form .input-wrapper {

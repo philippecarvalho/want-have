@@ -4,6 +4,8 @@
 
 O [Want/Have](https://want-have.herokuapp.com/) é um site para você criar e editar suas listas de cartas de Magic: The Gathering
 
+[Exemplo de lista](https://want-have.herokuapp.com/list_show/5f96db33a6d02ee74fa021d8)
+
 ## Tecnologias utilizadas:
 - Node.js
 - Express

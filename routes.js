@@ -27,8 +27,12 @@ const { Store } = require('express-session')
 
 const mailer = require('./mail/mailer')
 
-router.get('/', ensureAuthenticated, async (req, res) => {
+router.get('/', ensureAuthenticated, (req, res) => {
 	res.redirect('/dashboard')
+})
+
+router.get('/sobre', (req, res) => {
+	res.redirect('https://github.com/philippecarvalho/want-have/')
 })
 
 router.get('/dashboard', ensureAuthenticated, async (req, res) => {
