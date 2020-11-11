@@ -1,10 +1,13 @@
-# Want/Have
+![Want/Have](https://raw.githubusercontent.com/philippecarvalho/want-have/master/public/imgs/logo-body.png)
+
 
 ## Um editor de listas de Magic: The Gathering
 
 O [Want/Have](http://phcarvalho.com.br/) é um site para você criar e editar suas listas de cartas de Magic: The Gathering
 
-[Exemplo de lista](https://want-have.herokuapp.com/list_show/5f96db33a6d02ee74fa021d8)
+[Exemplo de lista](http://phcarvalho.com.br/list_show/5fabb5dba78920001bed6c5f)
+
+![lista](https://i.imgur.com/LhoWogF.png)
 
 ## Tecnologias utilizadas:
 - Node.js
